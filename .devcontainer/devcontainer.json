@@ -1,5 +1,5 @@
 {
-  "name": "tansu-java-apache-kafka",
+  "name": "nisshi-java-apache-kafka",
   "dockerFile": "Dockerfile",
   "postStartCommand": "./bin/up",
   "hostRequirements": {

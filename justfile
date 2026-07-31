@@ -18,13 +18,13 @@ docker-compose-logs:
 minio-local-alias:
     docker compose exec minio /usr/bin/mc alias set local http://localhost:9000 minioadmin minioadmin
 
-minio-tansu-bucket:
-    docker compose exec minio /usr/bin/mc mb local/tansu
+minio-nisshi-bucket:
+    docker compose exec minio /usr/bin/mc mb local/nisshi
 
 minio-ready-local:
     docker compose exec minio /usr/bin/mc ready local
 
-up: docker-compose-up minio-ready-local minio-local-alias minio-tansu-bucket
+up: docker-compose-up minio-ready-local minio-local-alias minio-nisshi-bucket
 
 psql:
     docker compose exec db psql $*

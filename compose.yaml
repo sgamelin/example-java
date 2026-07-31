@@ -35,8 +35,8 @@ services:
   kafka:
     image: ${KAFKA_IMAGE}
     command: /bin/sleep infinity
-  tansu:
-    image: ${TANSU_IMAGE}
+  nisshi:
+    image: ${NISSHI_IMAGE}
     restart: unless-stopped
     environment:
       ADVERTISED_LISTENER_URL: ${ADVERTISED_LISTENER_URL}
