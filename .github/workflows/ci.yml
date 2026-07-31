@@ -41,7 +41,7 @@ jobs:
       STORAGE_ENGINE: ${{matrix.storage}}
       NISSHI_IMAGE: ${{matrix.nisshi}}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: docker compose --ansi never --progress plain up --no-color --quiet-pull --detach
       - run: docker compose --ansi never exec minio /usr/bin/mc ready local
       - run: docker compose --ansi never exec minio /usr/bin/mc alias set local http://localhost:9000 ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }}
